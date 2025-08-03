@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Acceso al Sistema - Medisoft</title>
+
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files (Rutas Corregidas) -->
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Main CSS File (Ruta Corregida) -->
+  <link href="../../assets/css/main.css" rel="stylesheet">
+
+  <!-- Estilos personalizados para el Login -->
+  <style>
+    body {
+      background-color: var(--accent-color);
+    }
+    .login-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      width: 100%;
+      max-width: 450px;
+      background-color: #fff;
+    }
+    .login-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .login-header .my-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        color: var(--accent-color);
+    }
+    .login-header .sitename {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+    .btn-ingresar {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-weight: 700;
+      transition: 0.3s;
+      border: 2px solid transparent;
+    }
+    .btn-ingresar:hover {
+      background-color: transparent;
+      color: var(--accent-color);
+      border: 2px solid var(--accent-color);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <div class="container login-container">
+      <div class="card login-card p-4 p-md-5">
+        <div class="login-header">
+          <svg class="my-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="iconCarrier">
+                <path d="M22 22L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                <path d="M17 22V6C17 4.11438 17 3.17157 16.4142 2.58579C15.8284 2 14.8856 2 13 2H11C9.11438 2 8.17157 2 7.58579 2.58579C7 3.17157 7 4.11438 7 6V22" stroke="currentColor" stroke-width="1.5"></path>
+                <path opacity="0.5" d="M21 22V8.5C21 7.09554 21 6.39331 20.6629 5.88886C20.517 5.67048 20.3295 5.48298 20.1111 5.33706C19.6067 5 18.9045 5 17.5 5" stroke="currentColor" stroke-width="1.5"></path>
+                <path opacity="0.5" d="M3 22V8.5C3 7.09554 3 6.39331 3.33706 5.88886C3.48298 5.67048 3.67048 5.48298 3.88886 5.33706C4.39331 5 5.09554 5 6.5 5" stroke="currentColor" stroke-width="1.5"></path>
+                <path d="M12 22V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+            </g>
+          </svg>
+          <h1 class="sitename">MediSoft</h1>
+        </div>
+        <h3 class="text-center mb-4">Iniciar Sesión</h3>
+        <form id="loginForm">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="su-correo@ejemplo.com" required>
+            <label for="email">Correo Electrónico</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input type="password" class="form-control" id="password" value="temp123" required>
+            <label for="password">Contraseña</label>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-ingresar">Ingresar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      if (email) {
+        // Redirigir a la página de cambio de contraseña, pasando el email en la URL
+        window.location.href = `change-password.html?email=${encodeURIComponent(email)}`;
+      } else {
+        alert('Por favor, ingrese un correo electrónico.');
+      }
+    });
+  </script>
+
+</body>
+</html>
