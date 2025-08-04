@@ -51,10 +51,10 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="../app/dashboards/dashboard-recepcion.html" class="active"><i class="bi bi-grid-fill me-1"></i> Dashboard</a></li>
+                    <li><a href="../dashboards/dashboard-clinico.html" class="active"><i class="bi bi-grid-fill me-1"></i> Dashboard</a></li>
                     <li><a href="#"><i class="bi bi-calendar-range-fill me-1"></i> Agenda General</a></li>
-                    <li><a href="#"><i class="bi bi-people-fill me-1"></i> Pacientes</a></li>
-                    <li><a href="#"><i class="bi bi-check2-square me-1"></i> Mis Tareas</a></li>
+                    <li><a href="../pacientes/pacientes.html"><i class="bi bi-people-fill me-1"></i> Pacientes</a></li>
+                    <li><a href="../tareas/tareas.html"><i class="bi bi-check2-square me-1"></i> Mis Tareas</a></li>
                     <li><a href="../inventario/listaInsumos.html"><i class="bi bi-box-arrow-in-down me-1"></i> Entradas Inventario</a></li>
                     <li class="dropdown position-relative">
                         <a href="#">
@@ -93,25 +93,30 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="sku" class="form-label">SKU</label>
-                                    <input type="text" id="sku" class="form-control">
+                                    <input type="text" id="sku" class="form-control" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="nombre" class="form-label">Nombre</label>
-                                    <input type="text" id="nombre" class="form-control">
+                                    <input type="text" id="nombre" class="form-control" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="stock" class="form-label">Stock Actual</label>
-                                    <input type="number" id="stock" class="form-control">
+                                    <input type="number" id="stock" class="form-control" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="stock_min" class="form-label">Stock Mínimo</label>
-                                    <input type="number" id="stock_min" class="form-control">
+                                    <input type="number" id="stock_min" class="form-control" required>
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <button type="submit" class="btn btn-success">
+                                <a href="../inventario/listaInsumos.html" class="btn btn-success">
                                     <i class="bi bi-check-circle"></i> Guardar
-                                </button>
+                                </a>
+                                <a href="../inventario/listaInsumos.html" class="btn btn-danger">
+                                    <i class="bi bi-x-circle"></i> Cancelar
+                                </a>
+                            </div>
+
                             </div>
                         </form>
                     </div>
