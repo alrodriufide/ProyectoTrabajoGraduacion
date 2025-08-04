@@ -63,7 +63,7 @@
 </head>
 <body>
 
-    <header id="header" class="header d-flex align-items-center fixed-top">
+  <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="dashboard-recepcion.html" class="logo d-flex align-items-center me-auto me-xl-0">
@@ -119,54 +119,51 @@
     </div>
   </header>
 
-
   <main class="main">
     <!-- Page Title con Fondo de Imagen -->
     <div class="page-title">
       <div class="container">
-        <h1><strong>Registrar Nuevo Paciente</strong></h1>
+        <h1><strong>Listado de Pacientes</strong></h1>
       </div>
     </div><!-- End Page Title -->
     
     <section id="dashboard-widgets" class="featured-services section light-background">
-        <div class="container">
-            <div class="row gy-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <form>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">Nombre *</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Apellidos *</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
+      <div class="container">
+        <div class="row gy-4">
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control" value="Laura" required>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">Teléfono *</label>
-                                    <input type="tel" class="form-control" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Número de Identificación *</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" value="Herrera" required>
                             </div>
-                            <!--<div class="alert alert-danger" role="alert">
-                                Ya existe un paciente con este nmero de identificacin.
-                                <a href="ficha-paciente.html" class="alert-link">Desea ver el expediente?</a>
-                            </div>-->
-                            <div class="text-end">
-                                <button class="btn" style="background-color: #22494d; border-color: #22494d; color: #fff;"><i class="bi bi-save"></i> Guardar</button>
-                                <a href="pacientes.html" class="btn btn-secondary">Cancelar</a>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" value="8888-1234" required>
                             </div>
-                        </form>
-                    </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Correo</label>
+                                <input type="email" class="form-control is-invalid" value="laura@" required>
+                                <div class="invalid-feedback">El formato del correo es inválido.</div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <button class="btn btn-primary"><i class="bi bi-save"></i> Guardar Cambios</button>
+                            <a href="pacientes.html" class="btn btn-secondary">Volver</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+      </div>
     </section>
   </main>
   <footer id="footer" class="footer position-relative light-background">
@@ -194,3 +191,4 @@
   <script src="../../assets/js/main.js"></script>
   </body>
 </html>
+
