@@ -22,7 +22,7 @@
                     <li><a href="#"><i class="bi bi-calendar-range-fill me-1"></i> Agenda General</a></li>
                     <li><a href="#"><i class="bi bi-exclamation-triangle-fill me-1"></i> Alertas</a></li>
                     <li><a href="#"><i class="bi bi-check2-square me-1"></i> Mis Tareas</a></li>
-                    <li><a href="../planes/gestion-planes.html"><i class="bi bi-box-arrow-in-down me-1"></i> Gestión Planes</a></li>
+                    <li><a href="../planes/gestion-planes.php"><i class="bi bi-box-arrow-in-down me-1"></i> Gestión Planes</a></li>
                     <li><a href="../pacientes/pacientes.html"><i class="bi bi-person-circle me-1"></i> Pacientes</a></li>
                     <li class="dropdown position-relative">
                         <a href="#">
