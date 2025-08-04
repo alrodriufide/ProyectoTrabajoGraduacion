@@ -10,67 +10,16 @@
   <link href="../../assets/img/favicon.png" rel="icon">
   <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Vendor CSS Files (Rutas Corregidas) -->
+  <!-- Vendor CSS Files-->
   <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 
-  <!-- Main CSS File (Ruta Corregida) -->
+  <!-- Main CSS File-->
   <link href="../../assets/css/main.css" rel="stylesheet">
 
-  <!-- Estilos personalizados para el Login -->
-  <style>
-    body {
-      background-color: var(--accent-color);
-    }
-    .login-container {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .login-card {
-      border: none;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      width: 100%;
-      max-width: 450px;
-      background-color: #fff;
-    }
-    .login-header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-    }
-    .login-header .my-icon {
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
-        color: var(--accent-color);
-    }
-    .login-header .sitename {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--heading-color);
-    }
-    .btn-ingresar {
-      background-color: var(--accent-color);
-      color: var(--contrast-color);
-      border-radius: 50px;
-      padding: 12px 30px;
-      font-weight: 700;
-      transition: 0.3s;
-      border: 2px solid transparent;
-    }
-    .btn-ingresar:hover {
-      background-color: transparent;
-      color: var(--accent-color);
-      border: 2px solid var(--accent-color);
-    }
-  </style>
 </head>
 
-<body>
+<body class="login-body">
 
   <main>
     <div class="container login-container">
@@ -105,18 +54,35 @@
     </div>
   </main>
 
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const email = document.getElementById('email').value;
-      if (email) {
-        // Redirigir a la página de cambio de contraseña, pasando el email en la URL
-        window.location.href = `change-password.html?email=${encodeURIComponent(email)}`;
-      } else {
-        alert('Por favor, ingrese un correo electrónico.');
-      }
-    });
-  </script>
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Previene el envío normal del formulario
+    
+    const emailInput = document.getElementById('email');
+    const email = emailInput.value.toLowerCase().trim(); // Obtiene el correo en minúsculas y sin espacios
+
+    // Lista de correos válidos para la demostración
+    const validEmails = [
+      'recepcion@doctorrivera.com',
+      'admin@doctorrivera.com',
+      'cirujano@doctorrivera.com'
+    ];
+
+    if (!email) {
+      alert('Por favor, ingrese un correo electrónico.');
+      return;
+    }
+
+    // Verifica si el correo ingresado está en nuestra lista de correos válidos
+    if (validEmails.includes(email)) {
+      // Si el correo es válido, redirige a la página de cambio de contraseña
+      window.location.href = `change-password.html?email=${encodeURIComponent(email)}`;
+    } else {
+      // Si el correo no es válido, muestra el mensaje de error que solicitaste
+      alert('El correo o la contraseña son incorrectos');
+    }
+  });
+</script>
 
 </body>
 </html>
