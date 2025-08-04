@@ -19,7 +19,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="../dashboards/dashboard-recepcion.php" class="active"><i class="bi bi-grid-fill me-1"></i> Dashboard</a></li>
-          <li><a href="#"><i class="bi bi-calendar-range-fill me-1"></i> Agenda General</a></li>
+          <li><a href="../planes/agenda-general.php"><i class="bi bi-calendar-range-fill me-1"></i> Agenda General</a></li>
           <li><a href="#"><i class="bi bi-people-fill me-1"></i> Pacientes</a></li>
           <li><a href="../planes/gestion-planes.html"><i class="bi bi-box-arrow-in-down me-1"></i> Gestión Planes</a></li>
           <li><a href="#"><i class="bi bi-check2-square me-1"></i> Mis Tareas</a></li>
