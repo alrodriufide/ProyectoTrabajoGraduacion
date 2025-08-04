@@ -87,7 +87,7 @@
                 <div class="card shadow-sm mb-5">
                     <div class="card-header bg-white d-flex justify-content-between align-items-center">
                         <h5 class="mb-0 text-dark">Inventario de Insumos</h5>
-                        <a href="formularioInsumo.html" class="btn btn-light btn-sm">
+                        <a href="../inventario/agregarInsumo.html" class="btn btn-light btn-sm">
                             <i class="bi bi-plus-circle"></i> Agregar Insumo
                         </a>
                     </div>
@@ -114,11 +114,19 @@
                                         <td><span class="badge bg-success">150</span></td>
                                         <td>50</td>
                                         <td>
-                                            <a href="formularioInsumo.html" class="btn btn-outline-secondary btn-sm"
+                                            <a href="../inventario/editarInsumo.html" class="btn btn-outline-secondary btn-sm"
                                                onclick="guardarDatos('SKU001', 'Guantes', 150, 50)">
                                                 <i class="bi bi-pencil"></i>
                                             </a>
                                             <button class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalConfirmacion"><i class="bi bi-trash"></i></button>
+                                            <div class="d-flex justify-content-end mb-3">
+                                                <button type="button" class="btn btn-outline-success btn-sm me-2">
+                                                    <i class="bi bi-file-earmark-excel"></i> Exportar a Excel
+                                                </button>
+                                                <button type="button" class="btn btn-outline-danger btn-sm">
+                                                    <i class="bi bi-file-earmark-pdf"></i> Exportar a PDF
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -127,11 +135,19 @@
                                         <td><span class="badge bg-warning text-dark">80</span></td>
                                         <td>30</td>
                                         <td>
-                                            <a href="formularioInsumo.html" class="btn btn-outline-secondary btn-sm"
+                                            <a href="../inventario/editarInsumo.html" class="btn btn-outline-secondary btn-sm"
                                                onclick="guardarDatos('SKU002', 'Jeringas', 80, 30)">
                                                 <i class="bi bi-pencil"></i>
                                             </a>
                                             <button class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalConfirmacion"><i class="bi bi-trash"></i></button>
+                                            <div class="d-flex justify-content-end mb-3">
+                                                <button type="button" class="btn btn-outline-success btn-sm me-2">
+                                                    <i class="bi bi-file-earmark-excel"></i> Exportar a Excel
+                                                </button>
+                                                <button type="button" class="btn btn-outline-danger btn-sm">
+                                                    <i class="bi bi-file-earmark-pdf"></i> Exportar a PDF
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -141,6 +157,80 @@
                 </div>
             </div>
         </section><!-- /Inventario Section -->
+
+
+        <div class="container py-5">
+            <h3 class="text-dark mb-4">Categorías del inventario</h3>
+            <!-- Categorías Section -->
+            <section id="categorias-inventario" class="section py-4">
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card shadow-sm mb-5">
+                        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0 text-dark">Categorías del Inventario</h5>
+                            <a href="formularioCategoria.html" class="btn btn-light btn-sm">
+                                <i class="bi bi-plus-circle"></i> Nueva Categoría
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <!-- Tabla de categorías -->
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>CAT001</td>
+                                            <td>Medicamentos</td>
+                                            <td>
+                                                <a href="../inventario/editarCategoria.html?id=CAT001" class="btn btn-outline-secondary btn-sm">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                                <button class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalConfirmacion">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>CAT002</td>
+                                            <td>Instrumental</td>
+                                            <td>
+                                                <a href="../inventario/editarCategoria.html?id=CAT002" class="btn btn-outline-secondary btn-sm">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                                <button class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalConfirmacion">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formulario de nueva categoría -->
+            <div id="formNueva" class="card p-3 mb-4 d-none">
+                <h5>Agregar Nueva Categoría</h5>
+                <input id="nombreCategoria" class="form-control mt-2 mb-3" placeholder="Nombre de la categoría" />
+                <button class="btn btn-success me-2">Guardar</button>
+                <button class="btn btn-outline-secondary">Cancelar</button>
+            </div>
+
+            <!-- Editor de categorías -->
+            <div id="editorCategorias" class="card p-3 d-none">
+                <h5>Editar/Eliminar Categorías</h5>
+                <ul id="listaCategorias" class="list-group mt-3"></ul>
+            </div>
+        </div>
+
         <!-- Modal de Confirmaci�n -->
         <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -184,13 +274,5 @@
 
     <script src="../../assets/js/main.js"></script>
 
-    <script>
-        function guardarDatos(sku, nombre, stock, stock_min) {
-            localStorage.setItem("sku", sku);
-            localStorage.setItem("nombre", nombre);
-            localStorage.setItem("stock", stock);
-            localStorage.setItem("stock_min", stock_min);
-        }
-    </script>
 </body>
 </html>
