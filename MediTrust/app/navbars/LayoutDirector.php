@@ -23,6 +23,7 @@
         <li><a href="../dashboards/dashboard-protocolos.php"><i class="bi bi-check2-square me-1"></i> Checklist</a></li>
         <li><a href="../pacientes/pacientes.html"><i class="bi bi-people-fill me-1"></i> Pacientes</a></li>
         <li><a href="../tareas/tareas.php"><i class="bi bi-check2-square me-1"></i> Mis Tareas</a></li>
+        <li><a href="../planes/gestion-planes.php"><i class="bi bi-check2-square me-1"></i> Gestión de Planes</a></li>
         <li><a href="../inventario/listaInsumos.html"><i class="bi bi-box-arrow-in-down me-1"></i> Entradas Inventario</a></li>
         <li class="dropdown">
           <a href="#"><i class="bi bi-person-circle me-1"></i><span>Erick Rivera</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
