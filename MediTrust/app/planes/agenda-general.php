@@ -25,7 +25,7 @@
 
 <body>
 
-<?php include '../../app/navbars/LayoutRecepcion.php'; // Usando el layout de recepción como base ?>
+<?php include '../../app/navbars/LayoutDirector.php'; // Usando el layout de recepción como base ?>
   <!-- Page Title con Fondo de Imagen -->
     <div class="page-title">
       <div class="container">

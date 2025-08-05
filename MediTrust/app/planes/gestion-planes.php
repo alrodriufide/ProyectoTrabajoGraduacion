@@ -19,24 +19,15 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand" href="#">Medisoft</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="mainNav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="../dashboards/dashboard-clinico.html">Dashboard</a></li>
-        <li class="nav-item"><a class="nav-link" href="gestion-planes.html">Gestión de Planes</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<?php include '../../app/navbars/LayoutDirector.php'; // Usando el layout de recepción como base ?>
 
 <div class="container">
 
-  <h2 class="page-title">Gestión de Planes de Tratamiento</h2>
+  <div class="page-title">
+      <div class="container">
+        <h1><strong>Gestión de Planes</strong></h1>
+      </div>
+    </div>
 
   <!-- Búsqueda paciente -->
   <div class="card mb-4 shadow-sm">
@@ -164,5 +155,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<?php include '../../app/navbars/footer.php'; ?>
 </body>
 </html>
