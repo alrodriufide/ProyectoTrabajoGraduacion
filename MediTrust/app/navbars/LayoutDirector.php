@@ -1,7 +1,7 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-    <a href="dashboard-recepcion.html" class="logo d-flex align-items-center me-auto me-xl-0">
+    <a href="../dashboards/dashboard-director.php" class="logo d-flex align-items-center me-auto me-xl-0">
       <svg class="my-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="bgCarrier" stroke-width="0"></g>
         <g id="tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -20,11 +20,11 @@
       <ul>
         <li><a href="../dashboards/dashboard-director.php" class="active"><i class="bi bi-grid-fill me-1"></i> Dashboard</a></li>
         <li><a href="../planes/agenda-general.php"><i class="bi bi-calendar-range-fill me-1"></i> Agenda General</a></li>
-        <li><a href="../dashboards/dashboard-protocolos.php"><i class="bi bi-check2-square me-1"></i> Checklist</a></li>
+        <li><a href="#"><i class="bi bi-check2-square me-1"></i> Checklist</a></li>
         <li><a href="../pacientes/pacientes.html"><i class="bi bi-people-fill me-1"></i> Pacientes</a></li>
         <li><a href="../tareas/tareas.php"><i class="bi bi-check2-square me-1"></i> Mis Tareas</a></li>
         <li><a href="../planes/gestion-planes.php"><i class="bi bi-check2-square me-1"></i> Gestión de Planes</a></li>
-        <li><a href="../inventario/listaInsumos.html"><i class="bi bi-box-arrow-in-down me-1"></i> Entradas Inventario</a></li>
+        <li><a href="../inventario/listaInsumos.php"><i class="bi bi-box-arrow-in-down me-1"></i> Entradas Inventario</a></li>
         <li class="dropdown">
           <a href="#"><i class="bi bi-person-circle me-1"></i><span>Erick Rivera</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>

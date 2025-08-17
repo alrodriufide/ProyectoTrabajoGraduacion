@@ -26,51 +26,69 @@
     <!-- Main CSS File -->
     <link href="../../assets/css/main.css" rel="stylesheet">
 
+  <style>
+    body { padding-top: 70px; }
+    .card-header { background-color: #3498db; color: #fff; }
+    .page-title { margin-bottom: 30px; }
+    .appointment-time { font-weight: bold; font-size: 1rem; }
+    .appointment-item { border-left: 5px solid #3498db; padding: 10px 15px; margin-bottom: 10px; background-color: #f9f9f9; }
+    .time-slot { cursor: pointer; padding: 8px 12px; border: 1px solid #ddd; border-radius: 5px; margin: 5px; text-align: center; }
+    .time-slot:hover { background-color: #3498db; color: #fff; }
+    .page-title {
+        background-image: url('../../assets/img/health/showcase-1.jpeg');
+        background-size: 50%;
+        background-position: center;
+        position: relative;
+        color: #fff; /* Color de texto blanco para legibilidad */
+      }
+      .page-title::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(2, 20, 24, 0.8) 0%, rgba(4, 158, 187, 0.6) 100%); /* Filtro frío */
+        z-index: 1;
+      }
+      .page-title .container {
+        position: relative;
+        z-index: 2;
+      }
+      .page-title h1, .page-title p {
+          color: #fff;
+      }  
 
+
+      .custom-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.custom-tab-link {
+    color: black;
+    background-color: #f8f9fa;
+    border: 1px solid transparent;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 0.75rem 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.custom-tab-link:hover {
+    background-color: #e9ecef;
+    color: #0a58ca;
+    border-color: #0d6efd;
+}
+
+.custom-tab-link.active {
+    background-color: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd #0d6efd #fff;
+}
+</style>
 </head>
+<body>
 
-<body class="index-page">
-
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-            <a href="../dashboards/dashboard-recepcion.php" class="logo d-flex align-items-center me-auto me-xl-0">
-                <svg class="my-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="bgCarrier" stroke-width="0"></g>
-                    <g id="tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                    <g id="iconCarrier">
-                        <path d="M22 22L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                        <path d="M17 22V6C17 4.11438 17 3.17157 16.4142 2.58579C15.8284 2 14.8856 2 13 2H11C9.11438 2 8.17157 2 7.58579 2.58579C7 3.17157 7 4.11438 7 6V22" stroke="currentColor" stroke-width="1.5"></path>
-                        <path opacity="0.5" d="M21 22V8.5C21 7.09554 21 6.39331 20.6629 5.88886C20.517 5.67048 20.3295 5.48298 20.1111 5.33706C19.6067 5 18.9045 5 17.5 5" stroke="currentColor" stroke-width="1.5"></path>
-                        <path opacity="0.5" d="M3 22V8.5C3 7.09554 3 6.39331 3.33706 5.88886C3.48298 5.67048 3.67048 5.48298 3.88886 5.33706C4.39331 5 5.09554 5 6.5 5" stroke="currentColor" stroke-width="1.5"></path>
-                        <path d="M12 22V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                    </g>
-                </svg>
-                <h1 class="sitename">MediSoft</h1>
-            </a>
-
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="../dashboards/dashboard-director.php" class="active"><i class="bi bi-grid-fill me-1"></i> Dashboard</a></li>
-                    <li><a href="../planes/agenda-general.php"><i class="bi bi-calendar-range-fill me-1"></i> Agenda General</a></li>
-                    <li><a href="../dashboards/dashboard-protocolos.php"><i class="bi bi-check2-square me-1"></i> Checklist</a></li>
-                    <li><a href="../pacientes/pacientes.html"><i class="bi bi-people-fill me-1"></i> Pacientes</a></li>
-                    <li><a href="../tareas/tareas.php"><i class="bi bi-check2-square me-1"></i> Mis Tareas</a></li>
-                    <li><a href="../planes/gestion-planes.php"><i class="bi bi-check2-square me-1"></i> Gestión de Planes</a></li>
-                    <li><a href="../inventario/listaInsumos.php"><i class="bi bi-box-arrow-in-down me-1"></i> Entradas Inventario</a></li>
-                    <li class="dropdown">
-                    <a href="#"><i class="bi bi-person-circle me-1"></i><span>Erick Rivera</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="../account/mi-perfil.php">Mi Perfil</a></li>
-                        <li><a href="../account/login.html">Cerrar Sesión</a></li>
-                    </ul>
-                    </li>
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-
-        </div>
-    </header>
+    <?php include '../../app/navbars/LayoutDirector.php'; // Usando el layout de recepción como base ?>
 
     <main class="main " style="margin-top: 70px;">
 
@@ -119,18 +137,7 @@
 
     </main>
 
-    <footer id="footer" class="footer position-relative light-background">
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">MediSoft</strong> <span>Todos los Derechos Reservados</span></p>
-            <div class="credits">
-                Diseñado por <a href="#">G1_SC-603</a>
-            </div>
-        </div>
-    </footer>
-
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <div id="preloader"></div>
+    <?php include '../../app/navbars/footer.php'; ?>
 
     <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/vendor/aos/aos.js"></script>
@@ -139,6 +146,15 @@
     <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="../../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <script src="../../assets/js/main.js"></script>
+
+    <script>
+        document.getElementById("sku").value = localStorage.getItem("sku") || "";
+        document.getElementById("nombre").value = localStorage.getItem("nombre") || "";
+        document.getElementById("stock").value = localStorage.getItem("stock") || "";
+        document.getElementById("stock_min").value = localStorage.getItem("stock_min") || "";
+    </script>
 
     <script src="../../assets/js/main.js"></script>
 </body>

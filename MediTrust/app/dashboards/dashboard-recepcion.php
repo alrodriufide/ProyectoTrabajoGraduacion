@@ -167,6 +167,134 @@
           </div>
 
         </div>
+                        <!-- Columna -->
+                <div class="col-lg-7">
+                    <div class="row gy-1">
+                        <!-- Widget: Checklist -->
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                            <div class="department-card task-widget">
+                                <div class="department-content">
+                                    <h3><strong><i class="bi bi-clipboard-check"></i></i> Checklist Prequirúrgico </strong></h3>
+                                    <div class="list-group list-group-flush mt-4">
+
+                                        <div class="list-group-item">
+                                            <div class="task-content">
+                                                <div class="task-title">Plantilla prequirúrgica seleccionada</div>
+                                                <div class="task-category text-muted small"><strong>Plantilla asociada a cirugía:</strong> Colecistectomía laparoscópica</div>
+                                                <div class="d-flex gap-2 mt-2">
+                                                    <button class="btn btn-primary btn-sm">Duplicar plantilla existente</button>
+                                                    <button class="btn btn-secondary btn-sm">Ver historial de ediciones</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="list-group-item">
+                                            <div class="task-content">
+                                                <div class="task-title">Datos del paciente</div>
+                                                <div class="task-category text-muted small"><strong>Nombre:</strong> Ana Rodríguez</div>
+                                                <div class="task-category text-muted small"><strong>Identificación:</strong> 204560938</div>
+                                                <div class="form-floating mt-3">
+                                                    <textarea class="form-control" placeholder="Notas adicionales..." id="notas"></textarea>
+                                                    <label for="notas">Notas adicionales</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="list-group-item">
+                                            <div class="task-content">
+                                                <div class="task-title">Preparación del paciente</div>
+                                                <div class="progress mb-3">
+                                                    <div id="progressBar" class="progress-bar bg-success" style="width: 0%;">0%</div>
+                                                </div>
+                                                <form id="checklistForm">
+                                                    <div class="form-check mb-3">
+                                                        <input class="form-check-input checklist-item" type="checkbox" id="consentimiento" required>
+                                                        <label class="form-check-label" for="consentimiento">Consentimiento informado firmado</label>
+                                                    </div>
+                                                    <div class="form-check mb-3">
+                                                        <input class="form-check-input checklist-item" type="checkbox" id="examenes">
+                                                        <label class="form-check-label" for="examenes">Exámenes de laboratorio entregados</label>
+                                                    </div>
+                                                    <div class="form-check mb-3">
+                                                        <input class="form-check-input checklist-item" type="checkbox" id="ayuno">
+                                                        <label class="form-check-label" for="ayuno">Ayuno confirmado (mínimo 8 horas)</label>
+                                                    </div>
+                                                    <div class="form-check mb-3">
+                                                        <input class="form-check-input checklist-item" type="checkbox" id="medicacion">
+                                                        <label class="form-check-label" for="medicacion">Medicación preoperatoria administrada</label>
+                                                    </div>
+
+                                                    <div class="form-check mb-3">
+                                                        <input class="form-check-input checklist-item" type="checkbox" id="ropa">
+                                                        <label class="form-check-label" for="ropa">Ropa quirúrgica entregada</label>
+                                                    </div>
+
+                                                    <div class="form-check mb-4">
+                                                        <input class="form-check-input checklist-item" type="checkbox" id="evaluacion">
+                                                        <label class="form-check-label" for="evaluacion">Evaluación preanestésica completada</label>
+                                                    </div>
+
+                                                    <div class="form-check mb-4">
+                                                        <input class="form-check-input checklist-item" type="checkbox" id="consentimiento">
+                                                        <div class="task-category text-muted small">Consentimiento firmado es requerido. No se puede cerrar el checklist sin este paso.</div>
+                                                        <button class="btn btn-outline-success btn-sm">Firmar electrónicamente</button>
+                                                    </div>
+
+                                                    <div class="d-grid gap-2">
+                                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mensajeModal">
+                                                            Confirmar Checklist
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary" onclick="crearPlantilla()">Crear Nueva Plantilla</button>
+                                                        <button type="button" class="btn btn-secondary" onclick="exportarPDF()">Exportar a PDF</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="list-group-item">
+                                            <div class="task-content">
+                                                <div class="task-title">Historial de procedimientos</div>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">Cirugía - Septiembre 2023 </li>
+                                                    <li class="list-group-item">Cirugía - Enero 2024 </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="list-group-item">
+                                            <div class="task-content">
+                                                <div class="task-title">Resultados de laboratorio</div>
+                                                <div class="task-category text-muted small">PDF adjunto disponible</div>
+                                                <button class="btn btn-outline-secondary btn-sm">Ver resultado</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal de mensaje -->
+                    <div class="modal fade" id="mensajeModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-success text-white">
+                                    <h5 class="modal-title" id="modalLabel">✅ Checklist enviado con éxito</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    El protocolo ha sido marcado como cumplido. Se ha enviado notificación al equipo médico el 02/08/2025 a las 15:00 horas por enfermero Carlos Soto
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal de mensaje -->
+
+                </div>
       </div>
     </section>
     
