@@ -175,49 +175,6 @@
                                 </div>
                             </div>
 
-                            <!-- Widget: Alertas de Mis Pacientes -->
-                            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
-                                <div class="department-card task-widget">
-                                    <div class="department-content">
-                                        <h3><strong><i class="bi bi-exclamation-triangle-fill"></i> Alertas de Mis Pacientes</strong></h3>
-                                        <p>Pacientes con condiciones críticas o seguimiento urgente.</p>
-                                        <div class="list-group list-group-flush mt-4">
-                                            <div class="list-group-item">
-                                                <div class="task-content">
-                                                    <div class="task-title text-danger">Luis Chaves</div>
-                                                    <div class="task-category text-muted small">Alergia a medicamentos reportada</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="list-group-item">
-                                                <div class="task-content">
-                                                    <div class="task-title text-danger">Pedro Sánchez</div>
-                                                    <div class="task-category text-muted small">Presión arterial muy elevada</div>
-                                                </div>
-                                            </div>
-
-                                            <div class="list-group-item">
-                                                <div class="task-content">
-                                                    <div class="task-title text-danger">Ana Martínez</div>
-                                                    <div class="task-category text-muted small">Fiebre persistente</div>
-                                                </div>
-                                            </div>
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Columna -->
-                <div class="col-lg-7">
-                    <div class="row gy-1">
                         <!-- Widget: Checklist -->
                         <div class="col-12" data-aos="fade-up" data-aos-delay="200">
                             <div class="department-card task-widget">
@@ -316,6 +273,46 @@
                             </div>
                         </div>
                     </div>
+
+                            <!-- Widget: Alertas de Mis Pacientes -->
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                                <div class="department-card task-widget">
+                                    <div class="department-content">
+                                        <h3><strong><i class="bi bi-exclamation-triangle-fill"></i> Alertas de Mis Pacientes</strong></h3>
+                                        <p>Pacientes con condiciones críticas o seguimiento urgente.</p>
+                                        <div class="list-group list-group-flush mt-4">
+                                            <div class="list-group-item">
+                                                <div class="task-content">
+                                                    <div class="task-title text-danger">Luis Chaves</div>
+                                                    <div class="task-category text-muted small">Alergia a medicamentos reportada</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item">
+                                                <div class="task-content">
+                                                    <div class="task-title text-danger">Pedro Sánchez</div>
+                                                    <div class="task-category text-muted small">Presión arterial muy elevada</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="list-group-item">
+                                                <div class="task-content">
+                                                    <div class="task-title text-danger">Ana Martínez</div>
+                                                    <div class="task-category text-muted small">Fiebre persistente</div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
 
                     <!-- Modal de mensaje -->
                     <div class="modal fade" id="mensajeModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">

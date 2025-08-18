@@ -40,6 +40,23 @@
                                     <p class="small text-muted mb-0">Dr. Rivera te asignó: "Llamar a paciente Ana Fuentes".</p>
                                     <p class="small text-muted mb-0">Hace 5 minutos</p>
                                 </div>
+
+                                <li class="dropdown-item d-flex align-items-start">
+                                <i class="bi bi-info-circle text-primary me-2 mt-1"></i>
+                                <div>
+                                    <h6>Existen items pendientes</h6>
+                                    <p class="small text-muted mb-0">Checklist del paciente 247 por expirar, por favor, atender en un plazo de 24 horas antes de la cita.</p>
+                                    <p class="small text-muted mb-0">Hace 15 minutos</p>
+                                </div>
+
+                                
+                                <li class="dropdown-item d-flex align-items-start">
+                                <i class="bi bi-info-circle text-primary me-2 mt-1"></i>
+                                <div>
+                                    <h6>Checklist completado</h6>
+                                    <p class="small text-muted mb-0">Correo de confirmación enviado exitosamente el 02/08/2025 a las 15:00 por enfermero Josue C.</p>
+                                    <p class="small text-muted mb-0">Hace 30 minutos</p>
+                                </div>
                             </li>
                         </ul>
                     </li>
