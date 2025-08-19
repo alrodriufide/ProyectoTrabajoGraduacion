@@ -5219,7 +5219,6 @@ section,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 .contact .form-container p {
@@ -6135,3 +6134,40 @@ section,
         .task-widget .task-category {
             font-size: 0.85em;
         }
+        /* Estilos para los slots de hora */
+        .time-slot-group .time-slot {
+        cursor: pointer;
+        padding: 8px 12px;
+        border: 1px solid #dee2e6;
+        border-radius: 20px;
+        margin: 4px;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+    }
+    .time-slot-group .time-slot:hover {
+        background-color: var(--accent-color);
+        color: white;
+        border-color: var(--accent-color);
+    }
+
+        /* Estilos para el fondo del page-title */
+    .page-title {
+      background-image: url('../../assets/img/health/showcase-1.webp'); /* Corregido a .webp */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .page-title::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 20, 24, 0.8) 0%, rgba(4, 158, 187, 0.6) 100%);
+      z-index: 1;
+    }
+    .page-title .container {
+      position: relative;
+      z-index: 2;
+    }
+    .page-title h1, .page-title p {
+      color: #fff;
+    }
