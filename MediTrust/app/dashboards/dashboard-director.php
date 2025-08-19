@@ -317,53 +317,7 @@
             </div>
           </div>
         </div>
-                        <!-- Columna -->
-                <div class="col-lg-7">
-                    <div class="row gy-1">
-                        <!-- Widget: Checklist -->
-                        <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-                            <div class="department-card task-widget">
-                                <div class="department-content">
-                                    <h3><strong><i class="bi bi-clipboard-check"></i></i> Checklist Prequirúrgico </strong></h3>
-                                    <div class="list-group list-group-flush mt-4">
-
-                                        <div class="list-group-item">
-                                            <div class="task-content">
-                                                <div class="task-title">Datos del paciente</div>
-                                                <div class="task-category text-muted small"><strong>Nombre:</strong> Ana Rodríguez</div>
-                                                <div class="task-category text-muted small"><strong>Identificación:</strong> 204560938</div>
-                                                <div class="form-floating mt-3">
-                                                    <textarea class="form-control" placeholder="Notas adicionales..." id="notas"></textarea>
-                                                    <label for="notas">Notas adicionales</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-group-item">
-                                            <div class="task-content">
-                                                <div class="task-title">Historial de procedimientos</div>
-                                                <ul class="list-group">
-                                                    <li class="list-group-item">Cirugía - Septiembre 2023 </li>
-                                                    <li class="list-group-item">Cirugía - Enero 2024 </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-group-item">
-                                            <div class="task-content">
-                                                <div class="task-title">Resultados de laboratorio</div>
-                                                <div class="task-category text-muted small">PDF adjunto disponible</div>
-                                                <button class="btn btn-outline-secondary btn-sm">Ver resultado</button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                      
       </div>
     </section>
     
