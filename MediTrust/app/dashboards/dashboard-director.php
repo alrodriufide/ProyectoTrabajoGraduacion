@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Dashboard Recepción - MediSoft</title>
+  <title>Dashboard director - MediSoft</title>
 
   <!-- Favicons -->
   <link href="../../assets/img/favicon.png" rel="icon">
@@ -440,5 +440,32 @@
   <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
   <script src="../../assets/js/main.js"></script>
+
+      <script>
+        const checklistItems = document.querySelectorAll('.checklist-item');
+        const progressBar = document.getElementById('progressBar');
+
+        checklistItems.forEach(item => {
+            item.addEventListener('change', actualizarProgreso);
+        });
+
+        function actualizarProgreso() {
+            const total = checklistItems.length;
+            const completados = [...checklistItems].filter(i => i.checked).length;
+            const porcentaje = Math.round((completados / total) * 100);
+            progressBar.style.width = porcentaje + '%';
+            progressBar.textContent = porcentaje + '%';
+        }
+
+        function crearPlantilla() {
+            alert("Funcionalidad para crear nueva plantilla: ¡próximamente implementada!");
+            // Funcion plantilla nueva
+        }
+
+        function exportarPDF() {
+            alert("Exportar a PDF");
+            // Lógica con html2pdf.js o similar
+        }
+    </script>
   </body>
 </html>
